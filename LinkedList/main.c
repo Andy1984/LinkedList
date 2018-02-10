@@ -12,22 +12,11 @@
 int main(int argc, const char * argv[]) {
     LinkedList l = NULL;
     linkedList_init(&l);
-    for (int i = 0; i < 10; i++) {
-        linkedList_insert(l, 0, i);
-    }
-    linkedList_print(l);
-//    linkedList_reverse(l);
-    linkedList_delete(l, 0);
-    linkedList_delete(l, 0);
-    linkedList_delete(l, 0);
-    linkedList_delete(l, 0);linkedList_delete(l, 0);
-    linkedList_delete(l, 0);
-    linkedList_delete(l, 0);
-    linkedList_delete(l, 0);
-    linkedList_delete(l, 0);
-    linkedList_delete(l, 0);
-    linkedList_delete(l, 0);
-//    linkedList_clear(l);
+//    for (int i = 0; i < 10; i++) {
+//        linkedList_insert(l, 0, i);
+//    }
+
+    linkedList_clear(l);
     linkedList_print(l);
     return 0;
 }

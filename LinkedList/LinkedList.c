@@ -124,7 +124,7 @@ void linkedList_print(LinkedList linkedList) {
 
 void linkedList_clear(LinkedList linkedList) {
     Node *currentNode = linkedList;
-    while (currentNode) {
+    while (currentNode->next) {
         currentNode = linkedList->next;
         linkedList_delete(linkedList, 0);
     }
