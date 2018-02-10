@@ -21,6 +21,7 @@ void linkedList_init(LinkedList *linkedList);
 void linkedList_initWithRandomNumbers(LinkedList *linkedList, int length);
 //链表长度
 int linkedList_length(LinkedList linkedList);
+Node *linkedList_nodeAtIndex(LinkedList linkedList, int index);
 //链表翻转
 void linkedList_reverse(LinkedList linkedList);
 void linkedList_reverseLoop(LinkedList list);

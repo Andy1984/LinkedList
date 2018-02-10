@@ -154,3 +154,50 @@ int linkedList_length(LinkedList linkedList) {
     }
     return i;
 }
+
+void swap(Node *a, Node *b) {
+    Node *temp = (Node *)malloc(sizeof(Node));
+    temp->value = a->value;
+    a->value = b->value;
+    b->value = temp->value;
+    free(temp);
+    temp = NULL;
+}
+
+Node *linkedList_nodeAtIndex(LinkedList linkedList, int index) {
+    Node *head = linkedList;
+    while (index >= 0) {
+        if (head->next == NULL) {
+            printf("nodeAtIndex越界 index: %d \n",index);
+            return NULL;
+        }
+        head = head->next;
+        index--;
+    }
+    return head;
+}
+
+void linkedList_sort(LinkedList linkedList) {
+//    int length = linkedList_length(linkedList);
+//    for (int i = 0; i < length - 1; i++) {
+//        for (int j = i + 1; j < length; j++) {
+//            Node *a = linkedList_nodeAtIndex(linkedList, i);
+//            Node *b = linkedList_nodeAtIndex(linkedList, i);
+//            swap(a, b);
+//        }
+//    }
+}
+void linkedList_bubbleSort(LinkedList linkedList) {
+    int length = linkedList_length(linkedList);
+    for (int i = 0; i < length - 1; i++) {
+        for (int j = i + 1; j < length; j++) {
+            Node *a = linkedList_nodeAtIndex(linkedList, i);
+            Node *b = linkedList_nodeAtIndex(linkedList, j);
+            if (a->value > b->value) {
+                swap(a, b);
+            }
+        }
+    }
+}
+void linkedList_fastSort(LinkedList linkedList);
+void linkedList_mergeSort(LinkedList linkedList);
