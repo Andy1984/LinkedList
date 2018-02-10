@@ -145,4 +145,12 @@ void linkedList_initWithRandomNumbers(LinkedList *linkedList, int length) {
     }
 }
 
-void linkedList_length(LinkedList linkedList);
+int linkedList_length(LinkedList linkedList) {
+    Node *currentNode = linkedList->next;
+    int i = 0;
+    while (currentNode) {
+        i++;
+        currentNode = currentNode->next;
+    }
+    return i;
+}

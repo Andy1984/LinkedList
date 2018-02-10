@@ -17,7 +17,10 @@ typedef struct Node {
 
 //创建空链表
 void linkedList_init(LinkedList *linkedList);
+//创建随机数链表
 void linkedList_initWithRandomNumbers(LinkedList *linkedList, int length);
+//链表长度
+int linkedList_length(LinkedList linkedList);
 //链表翻转
 void linkedList_reverse(LinkedList linkedList);
 void linkedList_reverseLoop(LinkedList list);
@@ -39,5 +42,6 @@ void linkedList_sort(LinkedList linkedList);
 void linkedList_bubbleSort(LinkedList linkedList);
 void linkedList_fastSort(LinkedList linkedList);
 void linkedList_mergeSort(LinkedList linkedList);
+
 
 #endif /* LinkedList_h */
