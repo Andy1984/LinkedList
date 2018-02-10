@@ -10,13 +10,10 @@
 #include "LinkedList.h"
 
 int main(int argc, const char * argv[]) {
-    LinkedList l = NULL;
-    linkedList_init(&l);
-//    for (int i = 0; i < 10; i++) {
-//        linkedList_insert(l, 0, i);
-//    }
+    LinkedList list = NULL;
+    linkedList_initWithRandomNumbers(&list, 20);
+    linkedList_print(list);
+    linkedList_dealloc(&list);
 
-    linkedList_clear(l);
-    linkedList_print(l);
     return 0;
 }

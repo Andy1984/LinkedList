@@ -130,12 +130,19 @@ void linkedList_clear(LinkedList linkedList) {
     }
 }
 
-void linkedList_dealloc(LinkedList linkedList) {
-    linkedList_clear(linkedList);
-    if (linkedList) {
-        free(linkedList);
-        linkedList = NULL;
+void linkedList_dealloc(LinkedList *linkedList) {
+    linkedList_clear(*linkedList);
+    if (*linkedList) {
+        free(*linkedList);
+        *linkedList = NULL;
     }
 }
 
+void linkedList_initWithRandomNumbers(LinkedList *linkedList, int length) {
+    linkedList_init(linkedList);
+    for (int i = 0; i < length; i++) {
+        linkedList_insert(*linkedList, i, random() % 100);
+    }
+}
 
+void linkedList_length(LinkedList linkedList);
